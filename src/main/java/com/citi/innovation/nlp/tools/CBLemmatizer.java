@@ -13,7 +13,7 @@ public class CBLemmatizer {
 	public static String[] tags(String[] tokens) {
 		try {
 			InputStream posModelIn = Thread.currentThread().getContextClassLoader()
-					.getResourceAsStream(NLPConfig.LIMMATIZER);
+					.getResourceAsStream(NLPConfig.POS_MAXENT);
 
 			POSModel posModel = new POSModel(posModelIn);
 			POSTaggerME posTagger = new POSTaggerME(posModel);
